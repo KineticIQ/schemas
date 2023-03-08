@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON Schema hive-6 package template configuration",
+  "description": "Node template generation for hive-6 package",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "package": {
+      "description": "package.json properties for given template",
+      "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/package.json"
+    },
+    "tsconfig": {
+      "description": "tsconfig configurations",
+      "type": "object",
+      "properties": {
+        "core": {
+          "description": "tsconfig core configuration",
+          "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tsconfig.json"
+        },
+        "build": {
+          "description": "tsconfig build configuration",
+          "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tsconfig.json"
+        },
+        "eslint": {
+          "description": "tsconfig eslint configuration",
+          "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tsconfig.json"
+        },
+        "jest": {
+          "description": "tsconfig jest configuration",
+          "$ref": "https://raw.githubusercontent.com/SchemaStore/schemastore/master/src/schemas/json/tsconfig.json"
+        }
+      }
+    }
+  }
+}
