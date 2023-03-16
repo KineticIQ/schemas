@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "JSON Schema hive-6 web application deployment strategy",
+  "description": "Web application deployment strategy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["application", "api"],
+  "properties": {
+    "application": {
+      "description": "Application name",
+      "type": "string",
+      "pattern": "^(?:@[a-z0-9-*~][a-z0-9-*._~]*/)?[a-z0-9-~][a-z0-9-._~]*$"
+    },
+    "api": {
+      "description": "Api entry point",
+      "type": "object",
+      "required": ["uri", "key"],
+      "properties": {
+        "uri": {
+          "description": "Api base path",
+          "type": "string"
+        },
+        "key": {
+          "description": "Api key",
+          "type": "string"
+        }
+      }
+    },
+    "business-intelligence": {
+      "description": "Business intelligence entry point",
+      "type": "object",
+      "required": ["uri"],
+      "properties": {
+        "uri": {
+          "description": "Business intelligence base path",
+          "type": "string"
+        },
+        "key": {
+          "description": "Business intelligence key",
+          "type": "string"
+        }
+      }
+    }
+  }
+}
